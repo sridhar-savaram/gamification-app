@@ -11,10 +11,10 @@ VOLUME /tmp
 EXPOSE 8080
 
 # The application's jar file
-ARG JAR_FILE=target/demo-docker-0.0.1-SNAPSHOT.jar
+ARG JAR_FILE=target/gamification-app-0.0.1-SNAPSHOT.jar
 
 # Add the application's jar to the container
-ADD ${JAR_FILE} demo-docker-0.0.1-SNAPSHOT.jar
+ADD ${JAR_FILE} gamification-app-0.0.1-SNAPSHOT.jar
 
 # Run the jar file
-ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/demo-docker-0.0.1-SNAPSHOT.jar"]
+ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/gamification-app-0.0.1-SNAPSHOT.jar"]
